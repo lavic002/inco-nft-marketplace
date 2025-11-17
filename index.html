@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inco Confidential NFT Marketplace</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">INCO • Confidential Marketplace</div>
+        <ul class="nav-links">
+            <li>Home</li>
+            <li>Explore</li>
+            <li>My Private Collection</li>
+            <li class="connect-wallet">Connect Wallet</li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Confidential NFT Marketplace</h1>
+        <p>Encrypted ownership • Private auctions • Zero front-running • ZK-verified authenticity</p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery">
+        <div class="nft-card">
+            <img src="https://via.placeholder.com/300x300" alt="NFT"/>
+            <h3>Encrypted Artifact #001</h3>
+
+            <p class="masked">Owner: •••••••••••••••</p>
+            <p class="masked">Last Sale Price: ••••• ETH</p>
+
+            <button class="reveal-btn" onclick="revealData(this)">Reveal to authorized viewer</button>
+
+            <div class="action-section">
+                <h4>Encrypted Bid</h4>
+                <input type="text" placeholder="•••••• ETH" class="masked-input" id="bidValue1" />
+                <button onclick="submitEncryptedBid('bidValue1')">Submit Encrypted Bid</button>
+            </div>
+
+            <div class="auction-widget">
+                <h4>Confidential Auction</h4>
+                <p class="masked">Highest Bid: ••••• ETH</p>
+                <button onclick="generateConfidentialAuctionProof()">Generate ZK Proof</button>
+                <span id="auctionProofStatus"></span>
+            </div>
+        </div>
+
+        <!-- SECOND NFT -->
+        <div class="nft-card">
+            <img src="https://via.placeholder.com/300x300/333333/ffffff" alt="NFT"/>
+            <h3>Encrypted Artifact #002</h3>
+
+            <p class="masked">Owner: •••••••••••••••</p>
+            <p class="masked">Last Sale Price: ••••• ETH</p>
+
+            <button class="reveal-btn" onclick="revealData(this)">Reveal to authorized viewer</button>
+
+            <div class="action-section">
+                <h4>Encrypted Offer</h4>
+                <input type="text" placeholder="•••••• ETH" class="masked-input" id="bidValue2" />
+                <button onclick="submitEncryptedBid('bidValue2')">Submit Encrypted Offer</button>
+            </div>
+
+            <div class="auction-widget">
+                <h4>Zero Front-Running</h4>
+                <p class="indicator">Protected with encrypted orderbook ✔</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
