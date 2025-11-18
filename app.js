@@ -1,53 +1,25 @@
-/* Simulation encryption utilities */
+// Basic login simulation
+const emailBtn = document.getElementById('emailLoginBtn');
+const walletBtn = document.getElementById('walletLoginBtn');
+const dashboard = document.getElementById('dashboard');
 
-function encryptData(data) {
-    return btoa(data + "|encrypted");
-}
+emailBtn.addEventListener('click', () => {
+  alert('Simulated Email Login');
+  dashboard.classList.remove('hidden');
+});
 
-function decryptData(data) {
-    try {
-        return atob(data).replace("|encrypted", "");
-    } catch {
-        return "Unauthorized";
-    }
-}
+walletBtn.addEventListener('click', () => {
+  alert('Simulated Wallet Connection');
+  dashboard.classList.remove('hidden');
+});
 
-function generateZKProof(data) {
-    return "zk-proof-" + btoa(data).slice(0, 12);
-}
+// Create collection button
+const createCollectionBtn = document.getElementById('createCollectionBtn');
+const collectionsList = document.getElementById('collectionsList');
 
-function verifyProof(proof) {
-    return proof.startsWith("zk-proof-");
-}
-
-/* Reveal fields */
-function revealData(btn) {
-    const parent = btn.parentElement;
-    const maskedFields = parent.querySelectorAll(".masked");
-
-    maskedFields.forEach(field => {
-        field.textContent = decryptData(encryptData("Authorized Viewer Only"));
-    });
-
-    btn.textContent = "Revealed (Simulated)";
-    btn.disabled = true;
-}
-
-/* Handle encrypted bids */
-function submitEncryptedBid(inputId) {
-    const input = document.getElementById(inputId);
-    const encrypted = encryptData(input.value);
-
-    alert("Encrypted Bid Submitted:\n" + encrypted);
-
-    input.value = "•••••• ETH"; // keep masked
-}
-
-/* Confidential auction ZK proof */
-function generateConfidentialAuctionProof() {
-    const proof = generateZKProof("highest-bid");
-    const valid = verifyProof(proof);
-
-    document.getElementById("auctionProofStatus").textContent =
-        valid ? " ZK Proof Verified ✔" : " Proof Failed ✖";
-}
+createCollectionBtn.addEventListener('click', () => {
+  const newCollection = document.createElement('div');
+  newCollection.textContent = 'New Confidential Collection (Encrypted)';
+  newCollection.className = 'collection-item';
+  collectionsList.appendChild(newCollection);
+});
