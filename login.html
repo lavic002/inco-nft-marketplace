@@ -28,7 +28,7 @@
                 <p class="tagline">Own, Trade, and Collect in Total Confidentiality.</p>
             </div>
 
-                <button onclick="window.location.href='index.html'" id="btn-wallet-connect" class="btn btn-secondary" >
+                <button onclick="enterDashboard()" id="btn-wallet-connect" class="btn btn-secondary" >
                     <svg class="btn-icon" fill="none" stroke="#4c74c2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                     <span style="color: #4c74c2;">Connect Wallet</span>
                 </button>
@@ -43,13 +43,13 @@
     </main>
 
 <script>
-        function enterSite() {
-            // 1. Give the user a "ticket" (save in session memory)
+        function enterDashboard() {
+            // Step A: Create the "Ticket" (Session Storage)
+            // This tells the next page "I clicked the button, don't kick me out"
             sessionStorage.setItem("accessAllowed", "true");
-            
-            // 2. Send them to the main page
+
+            // Step B: Redirect to Index
             window.location.href = "index.html";
         }
     </script>
-</body>
 </html>
