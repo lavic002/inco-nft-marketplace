@@ -8,6 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Check if the user has the "ticket"
+        if (!sessionStorage.getItem("accessAllowed")) {
+            // If no ticket, kick them back to login.html immediately
+            window.location.href = "login.html";
+        }
+    </script>
 </head>
 <body>
 
