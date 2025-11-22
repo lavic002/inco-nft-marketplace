@@ -317,6 +317,12 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     body{
         max-width: 100%;
     }
+    #create-item {
+   position:relative;
+   margin-top: 28%;
+   margin-left: 70%;
+   padding: 0px;
+   width: 25%;
 }
 /* dashboard */
 #create-item {
