@@ -316,6 +316,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 }
     body{
         max-width: 100%;
+        width:100dvh;
     }
     #create-item {
    position:relative;
@@ -326,7 +327,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 }
 /* dashboard */
 #create-item {
-   position:sticky;
+   position:relative;
    margin-top: 28%;
    margin-left: 75%;
    padding: 0px;
