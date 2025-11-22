@@ -17,6 +17,7 @@ body {
     font-family: 'Inter', sans-serif;
     height: 100vh;
     overflow: hidden;
+    height: 100%;
 }
 
 h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
@@ -25,7 +26,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 .app-container {
     display: grid;
     grid-template-columns: 250px 1fr;
-    height: 100vh;
+   height: auto;
 }
 
 /* Sidebar */
@@ -41,9 +42,9 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 40px;
+    font-size: 20px;
     font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: 1px;
     color: var(--primary-cyan);
 }
@@ -296,13 +297,31 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 /* Mobile */
 @media (max-width: 768px) {
     .app-container { grid-template-columns: 1fr; }
-    .sidebar { display: none; /* In real app, use hamburger menu */ }
+    .sidebar { display:none ; /* In real app, use hamburger menu */ }
+    .brand {
+    gap: 7px;
+    font-size: 14px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.user-info{display: none; 
+}
+#the-profile{
+    margin-left: 30%;
+    padding-left: 35px;
+    width: 100%;
+    gap: 10px;
+    border: none;
 }
 
 /* dashboard */
 #create-item {
-   
-    margin: 30% 0% 0% 90%;
+   position:sticky;
+   margin-top: 28%;
+   margin-left: 85%;
+   padding: 0px;
+   width: 10%;
     
 }
 
