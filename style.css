@@ -319,17 +319,17 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
         width:100dvh;
     }
     #create-item {
-   position:relative;
-   margin-top: 28%;
-   margin-left: 70%;
+   position:absolute;
+   mtop: 28%;
+   left: 70%;
    padding: 0px;
    width: 25%;
 }
 /* dashboard */
 #create-item {
-   position:relative;
-   margin-top: 28%;
-   margin-left: 75%;
+   position:absolute;
+   top: 28%;
+   left: 75%;
    padding: 0px;
    width: 20%;
     
