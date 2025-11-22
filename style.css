@@ -321,16 +321,16 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     }
     #create-item {
    position:fixed;
-   bottom: 15%;
-   right: 20%;
+   top: 85%;
+   right: 50%;
    padding: 0px;
-   width: 25%;
+   width: 7%;
 }
 /* dashboard */
 #create-item {
    position:absolute;
    top: 85%;
-   left: 80%;
+   right: 80%;
    padding: 0px;
    width: 7%;
     
