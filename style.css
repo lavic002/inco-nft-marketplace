@@ -103,6 +103,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 /* Main Content */
 .main-content {
     padding: 32px;
+    padding-top: 13px;
     overflow-y: auto;
 }
 
