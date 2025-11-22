@@ -319,20 +319,6 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
         width:100dvh;
         overflow-x:hidden;
     }
-    #create-item {
-   position:absolute;
-   top: 85%;
-   right: 50%;
-   padding: 0px;
-   width: 100%;
-}
+  
 /* dashboard */
-#create-item {
-   position:absolute;
-   top: 85%;
-   right: 80%;
-   padding: 0px;
-   width: 7%;
-    
-}
 
