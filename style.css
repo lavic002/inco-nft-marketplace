@@ -318,7 +318,9 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     gap: 10px;
     border: none;
 }
-
+.navigation{
+    display:block;
+}
 
 
 }
@@ -340,4 +342,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 #create-item:hover, .nav-item.active {
     background: rgba(125, 211, 252, 0.1);
     color: var(--primary-cyan);
+}
+.navigation{
+    display:none;
 }
