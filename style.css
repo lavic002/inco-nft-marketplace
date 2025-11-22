@@ -316,7 +316,6 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 }
     body{
         width: 100%;
-        overflow-x: none;
     }
 }
 /* dashboard */
