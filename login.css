@@ -29,7 +29,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: relative;
 }
 
 /* Background Effects */
