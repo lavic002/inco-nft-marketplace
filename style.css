@@ -301,7 +301,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 /* Mobile */
 @media (max-width: 768px) {
     .app-container { grid-template-columns: 1fr; }
-    .sidebar { display:none ; /* In real app, use hamburger menu */ }
+    .nav-links { display:none ;  }
     .brand {
     gap: 7px;
     font-size: 14px;
