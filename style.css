@@ -314,12 +314,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     gap: 10px;
     border: none;
 }
-    body{
-        max-width: 100%;
-        width:100dvh;
-        overflow-x:hidden;
-    }
-  
+}
 /* dashboard */
 #create-item {
     position: fixed;
