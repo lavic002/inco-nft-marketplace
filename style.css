@@ -320,7 +320,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
         overflow-x:hidden;
     }
     #create-item {
-   position:fixed;
+   position:absolute;
    top: 85%;
    right: 50%;
    padding: 0px;
