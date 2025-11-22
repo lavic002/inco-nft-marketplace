@@ -314,6 +314,9 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     gap: 10px;
     border: none;
 }
+    body{
+        :width: 100vh;
+    }
 }
 /* dashboard */
 #create-item {
