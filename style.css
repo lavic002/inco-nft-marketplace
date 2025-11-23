@@ -325,7 +325,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     border: none;
 }
 .navigation a{
-    display: block;
+    
     position:absolute;
    
 }
