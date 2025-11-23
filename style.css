@@ -324,17 +324,24 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     gap: 10px;
     border: none;
 }
-    .navigation{
-        top:7%;
-         background-color: var(--sidebar-bg);
-    }
-
+.navigation{
+    display: ;
+    top:7%;
+    position:absolute;
+    background-color: var(--sidebar-bg);
+    z-index:99;
+    left: 2%;
+}
 .navigation:hover{
     display: block;
     position: absolute;
+    z-index: 99px;
     background-color: var(--sidebar-bg);
-    top: 7%;
-    left:1%
+    top: 5%;
+}
+.nav-item:hover, .nav-item.active {
+    background: rgba(125, 211, 252, 0.1);
+    color: var(--primary-cyan);
 }
 .main-content {
     position: absolute;
