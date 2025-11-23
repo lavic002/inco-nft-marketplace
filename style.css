@@ -325,7 +325,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     border: none;
 }
 .navigation{
-    display: none;
+    display: block;
     top:7%;
     position:absolute;
     background-color: var(--sidebar-bg);
@@ -339,9 +339,9 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     background-color: var(--sidebar-bg);
 
 }
-
-    .strokebar:hover .navigation {
-    display:block;
+.nav-item:hover, .nav-item.active {
+    background: rgba(125, 211, 252, 0.1);
+    color: var(--primary-cyan);
 }
 .main-content {
     position: absolute;
