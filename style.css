@@ -325,7 +325,8 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     border: none;
 }
     .navigation{
-        top:2%;
+        top:7%;
+         background-color: var(--sidebar-bg);
     }
 
 .navigation:hover{
