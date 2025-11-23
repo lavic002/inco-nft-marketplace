@@ -343,7 +343,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     background: rgba(125, 211, 252, 0.1);
     color: var(--primary-cyan);
 }
-    .strokebar:hover navigation {
+    .strokebar:hover .navigation {
     display:block;
 }
 .main-content {
