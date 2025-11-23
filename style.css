@@ -324,11 +324,15 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     gap: 10px;
     border: none;
 }
-.navigation{
-    display: none;
+.navigation a{
+    display: block;
     position:absolute;
    
 }
+
+    .navigation.active{
+        left:0;
+    }
 .navigation:hover{
     display: block;
     position: absolute;
@@ -350,6 +354,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     margin-right: 125%;
     top:1%;
     left:1%;
+    z-index:100;
 }
 }
 /* dashboard */
