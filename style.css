@@ -339,10 +339,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     background-color: var(--sidebar-bg);
 
 }
-.nav-item:hover, .nav-item.active {
-    background: rgba(125, 211, 252, 0.1);
-    color: var(--primary-cyan);
-}
+
     .strokebar:hover .navigation {
     display:block;
 }
