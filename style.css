@@ -324,12 +324,6 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     gap: 10px;
     border: none;
 }
-.navigation a{
-    padding-top:10px;
-    display:block;
-    position:fixed;
-   
-}
 
 .navigation:hover{
     display: block;
