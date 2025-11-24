@@ -360,7 +360,11 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     margin-right: 125%;
     top:1%;
     left:1%;
-   
+   width:50px;
+    background-color: rgba(125, 211, 252, 0;
+}
+    .strokebar:hover {
+    background-color: rgba(125, 211, 252, 0.2);
 }
 }
 /* dashboard */
@@ -383,16 +387,17 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     color: var(--primary-cyan);
 }
 .strokebar{
+    width: 50px;
+background-color: rgba(125, 211, 252, 0);
+    color:none;
     display: ;
    align-items: center;
-    gap: 12px;
+    gap: 1px;
     padding: 12px;
-    color: var(--text-muted);
     text-decoration: none;
-    border-radius: 8px;
+    border:none;
     transition: all 0.2s;
-
 }
 .strokebar:hover {
-    color: var(--primary-cyan);
+    background-color: rgba(125, 211, 252, 0.2);
 }
