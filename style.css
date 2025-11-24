@@ -357,12 +357,13 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 }
 
 .strokebar{
+     padding: 20px;
     position: absolute;
-    margin-right: 125%;
     top:1%;
     left:1%;
-    width: 50px;
+    width: 100px;
 background-color: rgba(125, 211, 252, 0);
+cursor: pointer;
 }
 .strokebar:hover {
     background-color: rgba(125, 211, 252, 0.2);
