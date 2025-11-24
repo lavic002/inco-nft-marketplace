@@ -327,7 +327,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 .navigation{
     display: none ;
     top:7%;
-    position:absolute;
+    position:relative;
     background-color: var(--sidebar-bg);
     z-index:99;
     left: 2%;
