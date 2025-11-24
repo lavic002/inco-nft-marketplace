@@ -325,27 +325,28 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     border: none;
 }
 .navigation{
-    display: none;
+    display: none ;
     top:7%;
     position:absolute;
     background-color: var(--sidebar-bg);
     z-index:99;
     left: 2%;
 }
-    .navigation.active{
-        display:block;
-    }
+.navigation.active{
+    display: block;
+}
 .navigation:hover{
     display: block;
     position: absolute;
     z-index: 99px;
     background-color: var(--sidebar-bg);
-
+    
 }
 .nav-item:hover, .nav-item.active {
     background: rgba(125, 211, 252, 0.1);
     color: var(--primary-cyan);
 }
+ 
 .main-content {
     position: absolute;
     padding: 30px;
@@ -360,10 +361,10 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     margin-right: 125%;
     top:1%;
     left:1%;
-   width:50px;
-    background-color: rgba(125, 211, 252, 0;
+    width: 50px;
+background-color: rgba(125, 211, 252, 0);
 }
-    .strokebar:hover {
+.strokebar:hover {
     background-color: rgba(125, 211, 252, 0.2);
 }
 }
@@ -383,7 +384,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 
 }
 #create-item:hover {
-    background: rgba(125, 211, 252, 0.1);
+    background: var(--sidebar-bg);
     color: var(--primary-cyan);
 }
 .strokebar{
