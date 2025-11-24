@@ -325,13 +325,16 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     border: none;
 }
 .navigation{
-    display: block;
+    display: none;
     top:7%;
     position:absolute;
     background-color: var(--sidebar-bg);
     z-index:99;
     left: 2%;
 }
+    .navigation.active{
+        display:block;
+    }
 .navigation:hover{
     display: block;
     position: absolute;
