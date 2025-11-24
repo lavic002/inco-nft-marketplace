@@ -1,26 +1,25 @@
-const hamburgerBtn = document.getElementById('strokebar');
-const navMenu = document.getElementById('navigation');
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const hamburgerBtn = document.getElementById('strokebar');
+    const navMenu = document.getElementById('navigation');
 
-// 1. Toggle Menu when Hamburger is clicked
-hamburgerBtn.addEventListener('click', (e) => {
-    // This prevents the click from bubbling up to the document immediately
-    e.stopPropagation(); 
-    navMenu.classList.toggle('active');
-});
-
-// 2. Close Menu when clicking outside
-document.addEventListener('click', (e) => {
-    // Check if the menu is currently showing
-    if (navMenu.classList.contains('active')) {
+    // Safety check: make sure elements actually exist
+    if (hamburgerBtn && navMenu) {
         
-        // Check if the clicked element is NOT the menu and NOT inside the menu
-        if (!navMenu.contains(e.target) && e.target !== hamburgerBtn) {
-            navMenu.classList.remove('active');
-        }
-    }
-});
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('active');
+            console.log("Button clicked!"); // Check your phone console for this
+        });
 
-// Optional: Prevent menu closing if clicking INSIDE the menu itself
-navMenu.addEventListener('click', (e) => {
-    e.stopPropagation();
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active')) {
+                if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                }
+            }
+        });
+    } else {
+        console.error("Error: stroke button or menu not found in HTML");
+    }
 });
