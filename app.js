@@ -1,15 +1,3 @@
-// 1. FIREBASE CONFIGURATION
-const firebaseConfig = {
- 
-};
-
-// 2. INITIALIZE FIREBASE (No Auth needed)
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-const storage = firebase.storage();
-
-console.log("Firebase Initialized (Public Mode)");
-
 // 3. MAIN APP LOGIC
 document.addEventListener('DOMContentLoaded', function() {
 
