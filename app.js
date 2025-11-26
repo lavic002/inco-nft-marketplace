@@ -1,12 +1,6 @@
 // 1. FIREBASE CONFIGURATION
 const firebaseConfig = {
- apiKey: "AIzaSyAYWmjZ-6QxAw_Mvr3vGbGLkW8xAK3mv-I",
-  authDomain: "confidential-marketplace.firebaseapp.com",
-  projectId: "confidential-marketplace",
-  storageBucket: "confidential-marketplace.firebasestorage.app",
-  messagingSenderId: "833743965062",
-  appId: "1:833743965062:web:32f7550c3cb674ca68ba07",
-  measurementId: "G-5W6PHGHWTT"
+ 
 };
 
 // 2. INITIALIZE FIREBASE (No Auth needed)
