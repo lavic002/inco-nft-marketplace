@@ -356,7 +356,9 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     left: 1%;
     
 }
-.sidebar{z-index:99;}
+.sidebar{z-index:99;
+        background-color:rgb(0,0,0,0.7);
+        }
 .sidebar.strokebar{
     padding: 20px;
     position: absolute;
