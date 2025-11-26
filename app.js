@@ -1,121 +1,84 @@
-// 3. MAIN APP LOGIC
-document.addEventListener('DOMContentLoaded', function() {
 
-    // --- SECTION A: NAVIGATION ---
+document.addEventListener('DOMContentLoaded', function() {
     const strokebar = document.getElementById('strokebar');
     const navigation = document.getElementById('navigation');
 
     if (strokebar && navigation) {
         strokebar.addEventListener('click', function() {
+            // This toggles the class 'active' on and off
             navigation.classList.toggle('active');
         });
     }
+});
 
-    // --- SECTION B: POPUP & IMAGE PREVIEW ---
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Select the elements using the IDs you provided
+    const cancelButton = document.getElementById('cancel-popup');
+    const overlay = document.getElementById('create-overlay');
+
+    // 2. Add the click event listener
+    if (cancelButton && overlay) {
+        cancelButton.addEventListener('click', function() {
+            // This hides the overlay
+            overlay.style.display = 'none';
+        });
+    }
+});
+const createBtn = document.getElementById('create-item');
+const overlay = document.getElementById('create-overlay');
+
+if (createBtn && overlay) {
+    createBtn.addEventListener('click', function(e) {
+        // 1. Stop the <a> tag from reloading or jumping the page
+        e.preventDefault(); 
+        
+        // 2. Show the overlay (matches the 'flex' from your CSS)
+        overlay.style.display = 'flex'; 
+    });
+}
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. SELECT ELEMENTS
     const createBtn = document.getElementById('create-item');
     const overlay = document.getElementById('create-overlay');
-    const cancelBtn = document.getElementById('cancel-popup');
+    const closeBtn = document.getElementById('cancel-popup');
     const uploadArea = document.getElementById('image-upload');
     const fileInput = document.getElementById('file-input');
     const previewImg = document.getElementById('image-preview');
 
-    // Open Popup (No login check anymore)
-    if (createBtn && overlay) {
-        createBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            overlay.style.display = 'flex';
-        });
-    }
+    // 2. OPEN/CLOSE LOGIC
+    createBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        overlay.style.display = 'flex'; // Show it
+    });
 
-    // Close Popup
-    if (cancelBtn && overlay) {
-        cancelBtn.addEventListener('click', () => overlay.style.display = 'none');
-    }
+    closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none'; // Hide it
+    });
 
-    if (overlay) {
-        overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) overlay.style.display = 'none';
-        });
-    }
+    // Close if clicking outside the white box
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.style.display = 'none';
+    });
 
-    // Image Preview
-    if (uploadArea && fileInput) {
-        uploadArea.addEventListener('click', () => fileInput.click());
-        
-        fileInput.addEventListener('change', function() {
-            const file = this.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    if (previewImg) {
-                        previewImg.src = e.target.result;
-                        previewImg.style.display = 'block';
-                    }
-                }
-                reader.readAsDataURL(file);
-            }
-        });
-    }
+    // 3. IMAGE PREVIEW LOGIC
+    // When the dashed box is clicked -> click the hidden input
+    uploadArea.addEventListener('click', () => fileInput.click());
 
-    // --- SECTION C: FIREBASE UPLOAD LOGIC (PUBLIC) ---
-    const form = document.getElementById('nft-creation-form');
-
-    if (form) {
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Setup Button Feedback
-            const submitBtn = document.getElementById('submit-btn') || form.querySelector('button');
-            const originalText = submitBtn ? submitBtn.innerText : "Submit";
-            
-            if(submitBtn) {
-                submitBtn.innerText = "Uploading...";
-                submitBtn.disabled = true;
-            }
-
-            try {
-                // 1. Get Inputs
-                const file = fileInput.files[0];
-                if (!file) throw new Error("Please select an image first.");
-
-                const nameVal = document.getElementById('nft-name').value;
-                const priceVal = document.getElementById('nft-price').value;
-                const descVal = document.getElementById('nft-description').value;
-
-                // 2. Upload Image
-                // We use a random number for the file name since we don't have user IDs
-                const uniqueId = Date.now() + Math.floor(Math.random() * 999);
-                const fileName = `nfts/public-${uniqueId}-${file.name}`;
+    // When a file is actually selected...
+    fileInput.addEventListener('change', function() {
+        const file = this.files[0];
+        if (file) {
+            // FileReader allows the browser to read the file instantly
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewImg.src = e.target.result; // Set src to the file data
+                previewImg.style.display = 'block'; // Show image
                 
-                const storageRef = storage.ref(fileName);
-                const snapshot = await storageRef.put(file);
-                const downloadURL = await snapshot.ref.getDownloadURL();
-
-                // 3. Save Data
-                await db.collection("nfts").add({
-                    name: nameVal,
-                    price: priceVal,
-                    description: descVal,
-                    image: downloadURL,
-                    ownerId: "anonymous_user", // Generic ID since no login
-                    createdAt: new Date()
-                });
-
-                // 4. Success
-                alert("Success! Item Created.");
-                overlay.style.display = 'none';
-                form.reset();
-                if(previewImg) previewImg.style.display = 'none';
-
-            } catch (error) {
-                console.error("Error:", error);
-                alert("Error: " + error.message);
-            } finally {
-                if(submitBtn) {
-                    submitBtn.innerText = originalText;
-                    submitBtn.disabled = false;
-                }
+             
             }
-        });
-    }
+            reader.readAsDataURL(file);
+        }
+    });
 });
+
+
