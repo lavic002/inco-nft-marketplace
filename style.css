@@ -357,13 +357,13 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     
 }
 .sidebar{z-index:99;
-        background-color:rgb(0,0,0,1);
+        background-color:rgb(0,0,0,0);
         }
 .sidebar.strokebar{
-    padding: 20px;
+    padding: 10px;
     position: absolute;
     top:1%;
-    left:2%;
+    left:1%;
    
     width: 100px;
 background-color: rgba(125, 211, 252, 0);
